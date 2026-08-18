@@ -1,70 +1,91 @@
-.contact-list {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 32px 20px;
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
   text-align: center;
 }
 
-.contact-list h1 {
-  margin: 0 0 16px;
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.contact-list .search {
+.login-form {
+  width: 300px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.login-form input {
+  display: block;
   width: 100%;
-  max-width: 480px;
-  padding: 10px 14px;
-  margin-bottom: 24px;
-  font-size: 16px;
-  color: var(--text);
-  background: var(--accent-bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
-.contact-list .search:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.contact-list .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+.welcome {
+  text-align: center;
+  margin-top: 40px;
 }
 
-.contact-list .empty {
-  grid-column: 1 / -1;
-  color: var(--text-h);
+.welcome button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.contact-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: 24px 20px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--accent-bg);
+.contact-list {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.contact-card .profile-picture {
+.contact-list .search {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-card {
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  padding: 20px;
+  background-color: color;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.contact-card img {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-}
-
-.contact-card h2 {
-  margin: 4px 0 0;
-  font-size: 18px;
-}
-
-.contact-card p {
-  margin: 0;
-  font-size: 14px;
-  color: var(--text-h);
-  overflow-wrap: anywhere;
 }

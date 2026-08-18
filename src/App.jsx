@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import ContactList from './ContactList.jsx'
+import Login from './Login.jsx'
+import Welcome from './Welcome.jsx'
 import './App.css'
 
 const contacts = [
@@ -28,12 +31,41 @@ const contacts = [
   },
 ]
 
-function App() {
+export default function UserState() {
+  const [user, setUser] = useState(null)
+  const [theme, setTheme] = useState('light')
+
+  function toggleTheme() {
+    const nextTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(nextTheme)
+    document.body.setAttribute('data-theme', nextTheme)
+  }
+
+  function handleLogin(userInfo) {
+    setUser(userInfo)
+  }
+
+  function handleLogout() {
+    setUser(null)
+  }
+
   return (
     <>
-      <ContactList contacts={contacts} />
+      <button
+        type="button"
+        className="theme-toggle"
+        onClick={toggleTheme}
+      >
+        {theme === 'light' ? 'Dark' : 'Light'}
+      </button>
+      {user ? (
+        <>
+          <Welcome user={user} onLogout={handleLogout} />
+          <ContactList contacts={contacts} />
+        </>
+      ) : (
+        <Login onLogin={handleLogin} />
+      )}
     </>
   )
 }
-
-export default App
