@@ -9,7 +9,7 @@ function ContactList({ contacts }) {
     if (!text) return true
     return (
       contact.name.toLowerCase().includes(text) ||
-      contact.email.toLowerCase().includes(text) ||
+      contact.email.toLowerCase().includes(text) || 
       contact.phone.toLowerCase().includes(text)
     )
   })

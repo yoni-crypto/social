@@ -3,6 +3,7 @@ import ContactList from './ContactList.jsx'
 import Login from './Login.jsx'
 import Welcome from './Welcome.jsx'
 import './App.css'
+import Test from './Test.jsx'
 
 const contacts = [
   {
@@ -66,6 +67,7 @@ export default function UserState() {
       ) : (
         <Login onLogin={handleLogin} />
       )}
+      <Test />
     </>
   )
 }
